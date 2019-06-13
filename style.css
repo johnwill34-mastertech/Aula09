@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    background-color: #628a44;
+    overflow-x: hidden;                             /* Retirar barras de movimento (scroll) */
+}
+nav{
+    background-color: #b2875c;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;                /*Para o logo permanecer no inicio da page*/
+    align-items: center;
+}
+
+a{
+    color: #dbdd4c;
+    font-size: 24pt;
+    text-decoration: none;
+    font-family: 'Fredoka One', cursive;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+section{
+    width: 100%;
+    height: 300px;
+} 
+
+/* -----------------------------------------  IMAGENS  --------------------------------------------------------- */
+nav div img{
+    height: 120px;
+    width: 180px;
+}
+
+main{
+    background-image: url(Imagens/background-bomdia.jpg);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+}
+main img{
+    height: 500px;
+    width: 500px;
+
+}
+
+ul{
+    list-style-type: none;                       /* Retirando marcador "•" da lista */
+    /*display: none;*/                           /*Sem display, pois queremos animação de aparecer conteúdo quando clicar */
+    width: 70%;
+    justify-content: space-around;
+    transform: translateX(100vw);               /* O elementos está transladado em 100vw, pois queremos animações */
+    transition: 2s;                             /* Transição de 2s */
+}
+
+.ativo{                                         /* Quando a classe estiver ativa, o display muda */
+    display: flex;
+    transform: translateX(0);                   /* retornando o elemento ao estado inicial */
+
+}
+
+.roda-jequiti{
+    transform: rotate(2500deg);
+    transition: 10s;
+}
